@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  /* Perplexity-inspired clean palette */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  /* Primary - Perplexity Teal/Cyan */
+  --primary: #20b8cd;
+  --primary-light: #5cd5e8;
+  --primary-dark: #1a9fb3;
+
+  /* Accent - Subtle blue */
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+
+  /* Neutral tones - clean grays */
+  --surface: #ffffff;
+  --surface-alt: #f7f7f8;
+  --surface-hover: #f0f0f1;
+  --border: #e5e5e5;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #191a1a;
+    --foreground: #ececec;
+    --surface: #232425;
+    --surface-alt: #2a2b2c;
+    --surface-hover: #343536;
+    --border: #3d3e3f;
+    --text-secondary: #a0a0a0;
+    --text-tertiary: #707070;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Smooth interactions */
+* {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
