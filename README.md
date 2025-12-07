@@ -1,8 +1,8 @@
-# LexAI - Legal Research Assistant
+# LexAI - Legal Research Assistant Agent
 
-An AI-powered legal research chatbot built with Next.js and LangGraph, featuring a Perplexity-style interface for comprehensive legal analysis and research.
+An AI-powered legal research agent chatbot built with Next.js and LangGraph, featuring a Perplexity-style interface for comprehensive legal analysis and research.
 
-![LexAI Interface](./screenshot.png)
+![LexAI Interface](./Screenshot.png)
 
 ## Features
 
